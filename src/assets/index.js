@@ -7,5 +7,5 @@ export {
     BackgroundCreative,
     LogoWithText,
     LogoWithoutText,
-    IconBack
+    IconBack,
 }

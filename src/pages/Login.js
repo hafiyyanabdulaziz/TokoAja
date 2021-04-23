@@ -21,7 +21,7 @@ const Login = ({ navigation }) => {
                 <View style={{ height: 15 }} />
                 <CustomTextInput label={'Password'} />
                 <View style={{ height: 50 }} />
-                <CustomButton title={'Login'} />
+                <CustomButton title={'Login'} onPress={navigation.navigate('MainApp')} />
                 <View style={{ height: 50 }} />
             </View>
         </ImageBackground>
