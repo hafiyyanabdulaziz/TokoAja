@@ -20,7 +20,8 @@ const MyColors = {
             secondary: MainColor.blue1,
         },
         primary: MainColor.black1,
-        secondary: MainColor.black2
+        secondary: MainColor.black2,
+        disable: MainColor.blue2
     },
     textInput: {
         border: MainColor.blue1,

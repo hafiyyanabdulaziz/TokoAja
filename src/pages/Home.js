@@ -1,5 +1,5 @@
 import React from 'react'
-import { ImageBackground, View, StyleSheet, TouchableOpacity } from 'react-native'
+import { ImageBackground, View, StyleSheet, TouchableOpacity, Text } from 'react-native'
 import CustomSearchBar from '../components/CustomSearchBar'
 import { BackgroundCreative } from './../assets'
 import MyColors from './../utils/MyColors'
@@ -12,8 +12,9 @@ const Home = ({ state, descriptors, navigation, position }) => {
             <View style={styles.header}>
                 <CustomSearchBar />
             </View>
+
             <View style={styles.content}>
-                <View style={{ flexDirection: 'row', paddingTop: 20 }}>
+                <View style={styles.tab}>
                     {state.routes.map((route, index) => {
                         const { options } = descriptors[route.key];
                         const label =
@@ -59,7 +60,7 @@ const Home = ({ state, descriptors, navigation, position }) => {
                                 onLongPress={onLongPress}
                                 style={{ flex: 1 }}
                             >
-                                <Animated.Text style={{ opacity }}>{label}</Animated.Text>
+                                <Text style={styles.text(isFocused)}>{label}</Text>
                             </TouchableOpacity>
                         );
                     })}
@@ -78,12 +79,23 @@ const styles = StyleSheet.create({
         backgroundColor: MyColors.background,
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
-        paddingHorizontal: 20,
-        height: 50
     },
     header: {
         paddingHorizontal: 20,
         paddingTop: 50,
         paddingBottom: 20
     },
+    tab: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    text: (isFocused) => ({
+        textAlign: 'center',
+        fontFamily: MyFonts[700],
+        fontSize: 20,
+        color: (isFocused) ? MyColors.text.title : MyColors.text.disable,
+        borderBottomWidth: 2,
+        paddingVertical: 15,
+        borderColor: (isFocused) ? MyColors.text.title : MyColors.text.disable
+    })
 })
