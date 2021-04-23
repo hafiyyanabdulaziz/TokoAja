@@ -3,19 +3,20 @@ import { Image, ImageBackground, StyleSheet, Text, View } from 'react-native'
 import CustomButton from '../components/CustomButton'
 import { BackgroundCreative, LogoWithoutText } from './../assets'
 import MyColors from './../utils/MyColors'
+import MyFonts from './../utils/MyFonts'
 
 const Landing = () => {
     return (
         <ImageBackground source={BackgroundCreative} style={styles.screen}>
-            <View>
+            <View style={styles.header}>
                 <Image source={LogoWithoutText} style={styles.logo} />
-                <Text>Belanja Serba Mudah di TokoAja. Sekalian Bantu #GoUMKM</Text>
+                <Text style={styles.title}>Belanja Serba Mudah di TokoAja. Sekalian Bantu #GoUMKM</Text>
             </View>
             <View style={styles.content}>
                 <View style={{ height: 50 }} />
-                <CustomButton />
+                <CustomButton title={'Login'} />
                 <View style={{ height: 20 }} />
-                <CustomButton />
+                <CustomButton title={'Register'} />
                 <View style={{ height: 50 }} />
             </View>
         </ImageBackground>
@@ -39,5 +40,15 @@ const styles = StyleSheet.create({
         borderTopLeftRadius: 25,
         borderTopRightRadius: 25,
         paddingHorizontal: 20
+    },
+    header: {
+        paddingHorizontal: 20,
+        paddingTop: 50,
+    },
+    title: {
+        fontFamily: MyFonts[700],
+        fontSize: 30,
+        marginTop: 60,
+        color: MyColors.text.title
     }
 })

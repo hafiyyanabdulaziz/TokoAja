@@ -3,11 +3,11 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
 
-const CustomButton = () => {
+const CustomButton = ({ title }) => {
     return (
         <TouchableOpacity>
-            <View style={styles.container}>
-                <Text style={styles.text}>Login</Text>
+            <View style={styles.container(title)}>
+                <Text style={styles.text(title)}>{title}</Text>
             </View>
         </TouchableOpacity>
     )
@@ -16,14 +16,15 @@ const CustomButton = () => {
 export default CustomButton
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: MyColors.button.primary,
+    container: (title) => ({
+        backgroundColor: (title == 'Login') ? MyColors.button.primary : MyColors.button.secondary,
         paddingVertical: 10,
         borderRadius: 20
-    },
-    text: {
+    }),
+    text: (title) => ({
         fontFamily: MyFonts[700],
         fontSize: 25,
-        textAlign: 'center'
-    }
+        textAlign: 'center',
+        color: (title == 'Login') ? MyColors.text.button.primary : MyColors.text.button.secondary
+    })
 })
