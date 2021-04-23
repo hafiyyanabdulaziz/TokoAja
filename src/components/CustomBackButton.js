@@ -1,7 +1,7 @@
 import React from 'react'
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import MyColors from '../utils/MyColors'
-import { BackgroundCreative, IconBack } from './../assets'
+import { IconBack } from './../assets'
 
 const CustomBackButton = () => {
     return (

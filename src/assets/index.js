@@ -1,7 +1,7 @@
 import BackgroundCreative from './BackgroudCreative.jpg'
-import LogoWithText from './LogoWithText.png'
-import LogoWithoutText from './LogoWithoutText.png'
 import IconBack from './icon_back.svg'
+import LogoWithoutText from './LogoWithoutText.png'
+import LogoWithText from './LogoWithText.png'
 
 export {
     BackgroundCreative,

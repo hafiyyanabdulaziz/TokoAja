@@ -7,7 +7,7 @@ import { BackgroundCreative } from './../assets'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
 
-const Login = () => {
+const Register = () => {
     return (
         <ImageBackground source={BackgroundCreative} style={styles.screen}>
             <View style={styles.header}>
@@ -15,20 +15,22 @@ const Login = () => {
             </View>
             <View style={styles.content}>
                 <View style={{ height: 50 }} />
-                <Text style={styles.title}>Login</Text>
+                <Text style={styles.title}>Register</Text>
                 <View style={{ height: 40 }} />
                 <CustomTextInput label={'Email'} />
                 <View style={{ height: 15 }} />
                 <CustomTextInput label={'Password'} />
+                <View style={{ height: 15 }} />
+                <CustomTextInput label={'Retype Password'} />
                 <View style={{ height: 50 }} />
-                <CustomButton title={'Login'} />
+                <CustomButton title={'Register'} />
                 <View style={{ height: 50 }} />
             </View>
         </ImageBackground>
     )
 }
 
-export default Login
+export default Register
 
 const styles = StyleSheet.create({
     screen: {
