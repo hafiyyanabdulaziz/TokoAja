@@ -21,6 +21,10 @@ const MyColors = {
         },
         primary: MainColor.black1,
         secondary: MainColor.black2
+    },
+    textInput: {
+        border: MainColor.blue1,
+        label: MainColor.blue1
     }
 }
 
