@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const ScreenThree = () => {
+const Product = () => {
     return (
         <View>
-            <Text>Ini Screen 3</Text>
+            <Text>Ini Product</Text>
         </View>
     )
 }
 
-export default ScreenThree
+export default Product
 
 const styles = StyleSheet.create({})

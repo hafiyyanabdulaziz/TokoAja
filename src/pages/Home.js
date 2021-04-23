@@ -1,10 +1,10 @@
 import React from 'react'
-import { ImageBackground, View, StyleSheet, TouchableOpacity, Text } from 'react-native'
+import { ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import Animated from 'react-native-reanimated'
 import CustomSearchBar from '../components/CustomSearchBar'
 import { BackgroundCreative } from './../assets'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
-import Animated from 'react-native-reanimated';
 
 const Home = ({ state, descriptors, navigation, position }) => {
     return (

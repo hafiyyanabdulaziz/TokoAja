@@ -1,14 +1,14 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 
-const ScreenTwo = () => {
+const Store = () => {
     return (
         <View>
-            <Text>Ini Screnn 2</Text>
+            <Text>Ini Store</Text>
         </View>
     )
 }
 
-export default ScreenTwo
+export default Store
 
 const styles = StyleSheet.create({})

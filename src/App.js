@@ -1,6 +1,5 @@
 import { NavigationContainer } from '@react-navigation/native';
 import React from 'react';
-import Home from './pages/Home';
 import Router from './router/Router';
 
 const App = () => {

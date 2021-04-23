@@ -1,7 +1,7 @@
 import React from 'react'
 import { StyleSheet, TextInput } from 'react-native'
-import MyFonts from '../utils/MyFonts'
 import MyColors from '../utils/MyColors'
+import MyFonts from '../utils/MyFonts'
 
 const CustomSearchBar = () => {
     return (

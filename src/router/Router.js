@@ -4,10 +4,10 @@ import React from 'react'
 import Home from '../pages/Home'
 import Landing from './../pages/Landing'
 import Login from './../pages/Login'
+import Product from './../pages/Product'
 import Register from './../pages/Register'
-import ScreenOne from './../pages/ScreenOne'
-import ScreenTwo from './../pages/ScreenTwo'
 import Splash from './../pages/Splash'
+import Store from './../pages/Store'
 
 const Stack = createStackNavigator();
 const Tab = createMaterialTopTabNavigator();
@@ -15,8 +15,8 @@ const Tab = createMaterialTopTabNavigator();
 const MainApp = () => {
     return (
         <Tab.Navigator tabBar={props => <Home {...props} />}>
-            <Tab.Screen name="ScreenOne" component={ScreenOne} />
-            <Tab.Screen name="ScreenTwo" component={ScreenTwo} />
+            <Tab.Screen name="Product" component={Product} />
+            <Tab.Screen name="Store" component={Store} />
         </Tab.Navigator>
     )
 }
