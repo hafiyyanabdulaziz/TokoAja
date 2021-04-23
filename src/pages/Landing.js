@@ -5,7 +5,7 @@ import { BackgroundCreative, LogoWithoutText } from './../assets'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
 
-const Landing = () => {
+const Landing = ({ navigation }) => {
     return (
         <ImageBackground source={BackgroundCreative} style={styles.screen}>
             <View style={styles.header}>
@@ -14,9 +14,9 @@ const Landing = () => {
             </View>
             <View style={styles.content}>
                 <View style={{ height: 50 }} />
-                <CustomButton title={'Login'} />
+                <CustomButton title={'Login'} onPress={() => navigation.navigate('Login')} />
                 <View style={{ height: 20 }} />
-                <CustomButton title={'Register'} />
+                <CustomButton title={'Register'} onPress={() => navigation.navigate('Register')} />
                 <View style={{ height: 50 }} />
             </View>
         </ImageBackground>

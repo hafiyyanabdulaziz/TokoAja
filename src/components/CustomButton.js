@@ -3,9 +3,9 @@ import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
 
-const CustomButton = ({ title }) => {
+const CustomButton = ({ title, onPress }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={styles.container(title)}>
                 <Text style={styles.text(title)}>{title}</Text>
             </View>

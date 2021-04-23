@@ -1,8 +1,14 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Image, ImageBackground, StyleSheet } from 'react-native'
 import { BackgroundCreative, LogoWithText } from './../assets'
 
-const Splash = () => {
+const Splash = ({ navigation }) => {
+    useEffect(() => {
+        setTimeout(() => {
+            navigation.replace('Landing')
+        }, 3000);
+    }, [navigation])
+
     return (
         <ImageBackground source={BackgroundCreative} style={styles.screen}>
             <Image source={LogoWithText} style={styles.logo} />

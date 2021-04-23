@@ -7,11 +7,11 @@ import { BackgroundCreative } from './../assets'
 import MyColors from './../utils/MyColors'
 import MyFonts from './../utils/MyFonts'
 
-const Login = () => {
+const Login = ({ navigation }) => {
     return (
         <ImageBackground source={BackgroundCreative} style={styles.screen}>
             <View style={styles.header}>
-                <CustomBackButton />
+                <CustomBackButton onPress={() => navigation.goBack()} />
             </View>
             <View style={styles.content}>
                 <View style={{ height: 50 }} />

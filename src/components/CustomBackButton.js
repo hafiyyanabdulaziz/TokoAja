@@ -3,9 +3,9 @@ import { StyleSheet, TouchableOpacity, View } from 'react-native'
 import MyColors from '../utils/MyColors'
 import { IconBack } from './../assets'
 
-const CustomBackButton = () => {
+const CustomBackButton = ({ onPress }) => {
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={onPress}>
             <View style={styles.container}>
                 <IconBack />
             </View>

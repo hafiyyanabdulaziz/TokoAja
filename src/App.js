@@ -1,9 +1,12 @@
-import React from 'react'
-import Register from './pages/Register'
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import Router from './router/Router';
 
 const App = () => {
   return (
-    <Register />
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
   )
 }
 
